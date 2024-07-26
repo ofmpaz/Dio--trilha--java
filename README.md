@@ -22,4 +22,101 @@ O exemplo demonstra a diferença entre o uso de coleções com e sem Generics, e
    - Criação de uma lista (`ArrayList<String>`) especificando que apenas Strings podem ser adicionadas.
    - Adição de elementos do tipo String.
    - Iteração segura sobre a lista sem necessidade de casting.
+  
+
+   # Desafio diagramação das funcionalidades do iPhone 2007
+
+
+```mermaid
+classDiagram
+    class iPhone {
+        - modelo: String
+        - versaoOS: String
+        - numeroDeSerie: String
+        + ligar()
+        + desligar()
+        + desbloquear()
+        + bloquear()
+    }
+    class Telefone {
+        - listaContatos: List
+        - historicoChamadas: List
+        + fazerChamada()
+        + receberChamada()
+        + adicionarContato()
+        + removerContato()
+        + verHistoricoChamadas()
+    }
+    class Mensagens {
+        - listaMensagens: List
+        + enviarMensagem()
+        + receberMensagem()
+        + deletarMensagem()
+    }
+    class Email {
+        - contasEmail: List
+        - listaEmails: List
+        + enviarEmail()
+        + receberEmail()
+        + adicionarConta()
+        + removerConta()
+    }
+    class Safari {
+        - listaFavoritos: List
+        - historicoNavegacao: List
+        + navegar()
+        + adicionarFavorito()
+        + removerFavorito()
+        + verHistorico()
+    }
+    class iPod {
+        - listaMusicas: List
+        - listaVideos: List
+        - playlists: List
+        + reproduzirMusica()
+        + reproduzirVideo()
+        + criarPlaylist()
+        + adicionarMusicaPlaylist()
+    }
+    class Fotos {
+        - listaFotos: List
+        - listaAlbuns: List
+        + tirarFoto()
+        + visualizarFoto()
+        + criarAlbum()
+        + adicionarFotoAlbum()
+    }
+    class Calendário {
+        - eventos: List
+        + adicionarEvento()
+        + removerEvento()
+        + verEvento()
+    }
+    class Mapas {
+        - localizaçãoAtual: String
+        - locaisFavoritos: List
+        + buscarLocal()
+        + obterRota()
+        + adicionarFavorito()
+        + removerFavorito()
+    }
+    class Configurações {
+        - ajustesRede: Map
+        - ajustesSom: Map
+        - ajustesBrilho: Map
+        + ajustarRede()
+        + ajustarSom()
+        + ajustarBrilho()
+    }
+
+    iPhone --> Telefone
+    iPhone --> Mensagens
+    iPhone --> Email
+    iPhone --> Safari
+    iPhone --> iPod
+    iPhone --> Fotos
+    iPhone --> Calendário
+    iPhone --> Mapas
+    iPhone --> Configurações
+
 
